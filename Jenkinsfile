@@ -4,7 +4,7 @@ node {
     }
     stage('image-build'){
         sh "docker build -t reechasoni/python-app:1.2 ."
-        withCredentials([string(credentialsId: 'docker_id', variable: 'hello')]) {
+        withCredentials([string(credentialsId: 'reechasoni', variable: 'hello')]) {
     sh "docker login -u reechasoni -p ${hello}"
      } 
         sh "docker push reechasoni/python-app:1.2"
