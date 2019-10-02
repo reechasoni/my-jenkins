@@ -8,6 +8,6 @@ node {
     sh "docker login -u reechasoni -p ${hello}"
      } 
         sh "docker push reechasoni/python-app:1.2"
-        sh "ssh -i /var/lib/jenkins/dev.pem ec2-user@172.31.40.171 docker run -d -p 8081:5000 reechasoni/python-app:1.2"
+        sh "ssh -i /var/lib/jenkins/dev.pem ec2-user@172.31.89.26 docker run -d -p 8081:5000 reechasoni/python-app:1.2"
     }
 }
